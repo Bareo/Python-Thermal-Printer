@@ -1,15 +1,14 @@
-Python-Thermal-Printer
-======================
+# Python-Thermal-Printer
 
-Installation::
+## Installation
 
     pip install Adafruit_Thermal
 
-or::
+or
 
     python setup.py install
 
-Usage::
+## Usage
 
     >>> import Adafruit_Thermal
     >>> printer = Adafruit_Thermal('/dev/ttyAMA0', 19200, timeout=5)

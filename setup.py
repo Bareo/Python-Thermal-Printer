@@ -30,18 +30,19 @@ try:
 except ImportError:
     from distutils.core import setup
 
-def readme():
-    with open('README.rst') as f:
-        return f.read()
+with open('README.md') as f:
+      long_desc = f.read()
 
 setup(name='Adafruit_Thermal',
       version='1.1.0',
       description='Library for controlling Adafruit Thermal Printers',
-      url='https://github.com/bareo/Python-Thermal-Printer',
+      long_description=long_desc,
+      long_description_content_type="text/markdown",
+      url='https://github.com/zachwick/Python-Thermal-Printer',
       author='zach wick',
-      author_email='zwick@bareo.io',
+      author_email='zach@zachwick.com',
       license='MIT',
-      packages=['Adafruit_Thermal'],
+      packages=setuptools.find_packages(),
       zip_safe=False,
       classifiers=[
           'License :: OSI Approved :: MIT License',
